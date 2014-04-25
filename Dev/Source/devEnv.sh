@@ -33,9 +33,9 @@ add_python() {
 
 export -f add_python
 
-alias emacs='emacs -nw'
 export EDITOR="emacs"
 alias root='root -l'
+alias emacs='emacs -nw'
 
 export KJW_SRC_DIR=$DEV_DIR/Source
 if [ -e $KJW_SRC_DIR/external_software/extEnv.sh ]
