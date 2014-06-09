@@ -33,9 +33,17 @@ add_python() {
 
 export -f add_python
 
+b2s() {
+    BUILD=$(pwd)
+    other_string="${BUILD/Build/Source}"
+    ccmake $other_string
+}
+
+export -f b2s
+
+alias emacs='emacs -nw'
 export EDITOR="emacs"
 alias root='root -l'
-alias emacs='emacs -nw'
 
 export KJW_SRC_DIR=$DEV_DIR/Source
 if [ -e $KJW_SRC_DIR/external_software/extEnv.sh ]
